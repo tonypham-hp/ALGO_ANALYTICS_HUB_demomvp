@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALGO Analytics Hub — MVP Demo</title>
+<meta name="description" content="Bản demo giao diện MVP hợp nhất 42 chức năng — ASEANSC / ALGO. Dữ liệu minh họa, không phải dữ liệu thị trường thực.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%23d4a24e%22/></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <div class="topbar">
+    <div class="brand" onclick="goHome()">
+      <div class="brand-mark">A</div>
+      <div><div class="brand-text">ALGO <span>ANALYTICS HUB</span></div><div class="brand-sub">MVP DEMO · ASEANSC / ALGO</div></div>
+    </div>
+    <div class="search-wrap">
+      <span class="search-icon"></span>
+      <input id="globalSearch" class="search-input" placeholder="Tìm mã cổ phiếu hoặc chức năng — VD: FPT, Định giá, Vĩ mô…" style="padding-left:36px;">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+    <div class="topbar-right">
+      <div class="role-switch"><select onchange="setRole(this.value)"></select></div>
+      <span class="clock" id="clockText"></span>
+      <button class="icon-btn" title="Thông báo"><span class="dot-badge"></span></button>
+      <button class="icon-btn" title="Cài đặt"></button>
+      <div class="avatar">TN</div>
+    </div>
+  </div>
+  <div class="body-row">
+    <div class="sidebar" id="sidebarExtra">
+      <div class="sb-domain-head" onclick="goHome()" style="margin-bottom:6px;" id="homeNav">
+        <span class="sb-ic"></span><span class="sb-label" style="font-weight:600;">Trang chủ</span>
+      </div>
+      <div id="sidebar"></div>
+    </div>
+    <div class="main" id="main"></div>
+  </div>
+</div>
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="copy.js"></script>
+<script src="app.js"></script>
+<script src="screens1.js"></script>
+<script src="screens2.js"></script>
+<script src="screens3.js"></script>
+<script src="screens4.js"></script>
+<script src="screens5.js"></script>
+<script src="main.js"></script>
+<script>
+  document.getElementById('homeNav').querySelector('.sb-ic').innerHTML = ic('home',18);
+  document.getElementById('globalSearch').closest('.search-wrap').querySelector('.search-icon').innerHTML = ic('search',15);
+  document.querySelector('.icon-btn[title="Thông báo"]').innerHTML = ic('bell',17) + '<span class="dot-badge"></span>';
+  document.querySelector('.icon-btn[title="Cài đặt"]').innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>';
+  document.querySelector('.role-switch select').innerHTML = D.roles.map(r=>`<option value="${r.id}">${r.label}</option>`).join('');
+</script>
+</body>
+</html>

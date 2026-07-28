@@ -8,7 +8,7 @@ trường thực.** Khi làm việc với đội dev, các API/data source thậ
 
 Web thuần HTML/CSS/JS, không cần build, không phụ thuộc thư viện ngoài (trừ Google Fonts)
 
-# BA-DEV: tonypham_hp    
+## BA-DEV: tonypham_hp    
 
 ## Cách deploy qua Vercel CLI 
 

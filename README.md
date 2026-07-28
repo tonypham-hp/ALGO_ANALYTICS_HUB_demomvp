@@ -1,3 +1,4 @@
+
 # ALGO Analytics Hub — MVP Demo
 
 Bản demo giao diện MVP hợp nhất 42 chức năng đã đề xuất (3 giai đoạn phát triển),
@@ -5,28 +6,23 @@ dùng để trình bày cho sếp hình dung sản phẩm cuối cùng. **Toàn 
 đoạn chat, bản tin trong bản demo này là dữ liệu MINH HỌA — không phải dữ liệu thị
 trường thực.** Khi làm việc với đội dev, các API/data source thật sẽ thay thế file `data.js`.
 
-Web thuần HTML/CSS/JS, không cần build, không phụ thuộc thư viện ngoài (trừ Google Fonts) —
-deploy lên Vercel trong 2 phút.
+Web thuần HTML/CSS/JS, không cần build, không phụ thuộc thư viện ngoài (trừ Google Fonts)
 
-## Cách deploy nhanh nhất — kéo thả (không cần cài gì)
+# BA-DEV: tonypham_hp    
 
-1. Vào https://vercel.com/new
-2. Chọn mục **"Deploy without Git"** / kéo thả cả thư mục này vào ô upload
-3. Vercel tự nhận đây là static site, bấm **Deploy** — xong, có link xem ngay (dạng `ten-du-an.vercel.app`)
-
-## Cách deploy qua Vercel CLI (nếu đã cài Node.js)
+## Cách deploy qua Vercel CLI 
 
 ```bash
 npm i -g vercel
 cd algo-hub-mvp
-vercel          # làm theo hướng dẫn, chọn "N" khi hỏi link tới project có sẵn
+vercel         
 vercel --prod   # deploy bản chính thức
 ```
 
-## Cách deploy qua GitHub (khuyến nghị nếu sẽ làm việc với đội dev sau)
+## Cách deploy qua GitHub 
 
 1. Đẩy thư mục này lên 1 repo GitHub mới
-2. Vào vercel.com → **New Project** → chọn repo đó → Deploy (Vercel tự nhận static site, không cần cấu hình gì thêm)
+2. Vào vercel.com → **New Project** → chọn repo đó → Deploy 
 3. Mỗi lần push code mới, Vercel tự động deploy lại
 
 ## Cấu trúc file
@@ -40,16 +36,6 @@ copy.js         → mô tả ngắn cho từng miền/chức năng (hiện ở m
 app.js          → cấu hình 7 miền điều hướng, engine sidebar/routing
 screens1-5.js   → toàn bộ 41 màn hình chức năng chi tiết (chia theo miền)
 main.js         → trang chủ tổng quan, tìm kiếm toàn cục, khởi tạo app
-```
-
-## Cách xem thử ngay trên máy (không cần deploy)
-
-Mở trực tiếp `index.html` bằng trình duyệt, hoặc chạy 1 server tĩnh đơn giản:
-
-```bash
-cd algo-hub-mvp
-python3 -m http.server 8000
-# rồi mở http://localhost:8000
 ```
 
 ## Đã kiểm thử

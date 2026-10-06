@@ -1,5 +1,5 @@
 
-# ALGO Analytics Hub — MVP Demo
+# ALGO Analytics Hub
 
 Bản demo giao diện MVP hợp nhất 42 chức năng đã đề xuất (3 giai đoạn phát triển),
 dùng để trình bày cho sếp hình dung sản phẩm cuối cùng. **Toàn bộ số liệu, biểu đồ,

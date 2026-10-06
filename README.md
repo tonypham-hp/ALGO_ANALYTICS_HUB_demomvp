@@ -6,8 +6,6 @@ dùng để trình bày cho sếp hình dung sản phẩm cuối cùng. **Toàn 
 đoạn chat, bản tin trong bản demo này là dữ liệu MINH HỌA — không phải dữ liệu thị
 trường thực.** Khi làm việc với đội dev, các API/data source thật sẽ thay thế file `data.js`.
 
-Web thuần HTML/CSS/JS, không cần build, không phụ thuộc thư viện ngoài (trừ Google Fonts)
-
 ## BA-DEV: tonypham_hp    
 
 ## Cách deploy qua Vercel CLI 
